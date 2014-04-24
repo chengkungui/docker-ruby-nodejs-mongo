@@ -25,8 +25,9 @@ RUN echo 'export PATH="/.rbenv/bin:$PATH"' >> /.bashrc && \
     echo 'eval "$(rbenv init -)"' >> /.bashrc
 
 RUN CONFIGURE_OPTS="--disable-install-doc" rbenv install 2.1.0 && \
-    rbenv global 2.1.0  && \
-    rbenv init -
+    rbenv global 2.1.0 
+
+ENV PATH /.rbenv/shims:$PATH
 
 RUN echo 'install: --no-rdoc --no-ri' >> ~/.gemrc && \
     echo 'update: --no-rdoc --no-ri' >> ~/.gemrc && \
