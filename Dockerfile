@@ -6,7 +6,7 @@ MAINTAINER Chengkun
 RUN apt-get update
 
 #Install jre, this is required by Selenium
-RUN apt-get install -qqy openjdk-7-jre-headless
+RUN apt-get install -qqy openjdk-7-jdk-headless
 
 ## Install Node.js  v0.10
 RUN apt-get install -qqy nodejs
